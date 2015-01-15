@@ -1,0 +1,11 @@
+--- python-heatclient-0.3.0/test-requirements.txt~	2015-02-09 21:43:23.000000000 -0500
++++ python-heatclient-0.3.0/test-requirements.txt	2015-05-31 11:52:52.221316566 -0400
+@@ -3,7 +3,7 @@
+ # process, which may cause wedges in the gate later.
+ 
+ # Hacking already pins down pep8, pyflakes and flake8
+-hacking>=0.8.0,<0.9
++hacking
+ coverage>=3.6
+ discover
+ fixtures>=0.3.14
