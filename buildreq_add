@@ -65,3 +65,4 @@ docutils
 Jinja2
 markupsafe-python
 linecache2-python
+python-openstackclient-python
