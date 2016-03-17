@@ -1,22 +1,99 @@
 CHANGES
 =======
 
+1.0.0
+-----
+
+* Use poll_for_events for "openstack stack delete"
+* Add OSC plugin for openstack orchestation service list
+* Add OSC plugin for openstack orchestation build info
+* Strip any whitespace before checking for json
+* Add OSC plugin for stack resource mark unhealthy
+* Implement stack event list --follow
+* Replace assertEqual(None, *) with assertIsNone
+* Prompt user before deleting stack if tty
+* Add more readonly openstack client funcitonal tests
+* Use poll_for_events for "openstack stack <action>"
+* Use poll_for_events for "openstack stack adopt"
+* Use poll_for_events for "openstack stack update"
+* Use poll_for_events for "openstack stack create"
+* poll_for_events fall back to stack get
+* Fix collision with update and update cancel
+* Update OSC metavars
+* OpenstackClient plugin for software deployment output show
+* Move poll_for_events to event_utils
+* Adds --filter to search for resources
+* Updated from global requirements
+* Stack resource search
+* OpenstackClient plugin for software deployment metadata show
+* Add stack hook poll and clear to openstack client
+* Updated from global requirements
+* OpenstackClient plugin for deployment create
+* Remove the only-value flag of output-show
+* Changes to support server-side environment resolution
+* OSC plugin for stack snapshot delete
+* OSC plugin for stack snapshot create
+* Use yaml.safe_load() instead of yaml.load()
+* Use oslo.utils.reflection to extract class name
+* Add OpenstackClient plugin for software deployment show
+* Add openstack client stack snapshot restore
+* Add openstack client stack resource signal
+* OSC plugin for stack resource show and list
+* OpenstackClient plugin for event list
+* OpenstackClient plugin for event show
+* OpenstackClient plugin for stack delete
+* Fix resource_type osc entrypoint
+* OSC plugin for software config show
+* Updated from global requirements
+* Add openstack cli stack actions
+* Add openstack client resource type list and show
+* OSC plugin for stack snapshot show
+* Add openstack client software config create
+* OpenstackClient plugin for template show
+* OpenStackClient plugin for stack output list
+* OpenstackClient plugin for stack output show
+* Add openstack client software config list
+* Add openstack client stack resource metadata show
+* Adds ignore_errors for template-validate command
+* Add heat client support for Resource set health
+* Sort osc command entry points
+* OpenstackClient plugin for template function list
+* OpenstackClient plugin for template version list
+* Add OpenstackClient plugin for software deployment list
+* Add openstack client software config delete
+* OpenstackClient plugin for stack abandon
+* OpenstackClient plugin for stack adopt
+* OpenstackClient plugin for software deployment delete
+* Add openstack client stack basic funtion tests
+* Remove incorrectly used "# flake8: noqa"
+* Update translation setup
+* Edit backslashes for lines continuations
+* Raise CommandError when Any of stack/deployment/config delete failed
+* Updated from global requirements
+* Ignore restricted_actions key
+* Add formatters for 'tags' in method _do_stack_show
+* Enable osc extension in setup.cfg
+
 0.9.0
 -----
 
 * Disable osc extension for 0.9.0 release
 * Remove argparse from requirements
+* Add openstack client stack snapshot list
 * Add --dry-run option to openstack stack create
 * Include keystone message when authentication failed
+* Add show_nested support to update --dry-run
 * Update template_utils to support object env's
 * Improve "openstack stack create --wait" help message
 * OpenstackClient plugin for stack update
 * OpenstackClient plugin for stack create
+* Validate for empty file for stack-adopt
 * Misspelling in message
 * Updated from global requirements
 * Add resolve_outputs parameter to stack get method
 * Allow event specification in the environment
 * Add debug testenv in tox
+* Replace deprecated library function os.popen() with subprocess
 * Update --template-object to support nested stacks
 * Added -P support to template-validate
 * Fix error message on authentication failure
