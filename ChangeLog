@@ -1,12 +1,26 @@
 CHANGES
 =======
 
-1.1.0
+1.2.0
 -----
 
 * Updated from global requirements
+* Updated from global requirements
+* Fix logging issue in heatclient tests
+* Support OS_KEY/OS_CERT environment variables
+* Replace assertRegexpMatches with assertRegex
+* OSC plugin for orchestration template validate
+* Use stack.get for resolving outputs for old API
 * Fix regression handling relative paths in environment
-* Update .gitreview for stable/mitaka
+* stack-delete command should not call do_stack_list
+* Added deprecation warnings for heat commands
+* Don't use print() from event_utils.poll_for_events
+* OSC plugin should be region/interface aware
+* Replace ConfigParser with six.moves.configparser
+* Fixed issues in invalid JSON file
+* Fixed exceptions handling in stacks deleting
+* Add an example on keystoneauth Sessions to the doc
+* Updated from global requirements
 
 1.0.0
 -----
@@ -14,6 +28,7 @@ CHANGES
 * Use poll_for_events for "openstack stack delete"
 * Add OSC plugin for openstack orchestation service list
 * Add OSC plugin for openstack orchestation build info
+* Basic set of stack functional tests for openstack client
 * Strip any whitespace before checking for json
 * Add OSC plugin for stack resource mark unhealthy
 * Implement stack event list --follow
@@ -138,6 +153,7 @@ CHANGES
 * Refine event_log_formatter output
 * Last sync from oslo-incubator
 * Delete the corresponding config when deleting a deployment
+* Fill status code for every HTTPException
 * OpenStackClient plugin for stack list
 * Fix environment files parsing bug for stack-adopt
 * Support to list software configs
@@ -162,7 +178,7 @@ CHANGES
 
 * stack-update -x tolerate no template
 * Ability to specify show_nested for template validation
-* Fix deployment create error when using existing config
+* Fix deployment create error when using  existing config
 * Fix stack sorting support
 * Enable filters for heat resource-type-list
 * Modify test templates and the path to subunit2html
@@ -599,7 +615,7 @@ CHANGES
 * Add support for suspend/resume actions
 * Upload provider templates referenced in the environment
 * Fix all but H302 hacking rules
-* Fix all the pep8 E* and F* errors
+* Fix all the pep8  E* and F* errors
 * Fix various smaller pep8 issues
 * flake8 ignore build directory
 * Stop passing path to VerifiedHTTPSConnection
