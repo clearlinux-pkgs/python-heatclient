@@ -1,14 +1,102 @@
 CHANGES
 =======
 
+1.5.0
+-----
+
+* Add parameter_merge_startegies section
+* Show resource name path in event log formatter
+* Update .gitreview for stable/newton
+* Show resource name path in event log formatter
+* Clean imports in code
+* Update .gitreview for stable/newton
+* Modify use of assertTrue(A in B)
+* Import mox in __init__.py
+* Replace functions 'Dict.get' and 'del' with 'Dict.pop'
+* Trivial:Standardize the output format of 'help' in shell.py
+* Add parameter_merge_startegies section
+
+1.4.0
+-----
+
+* Updated from global requirements
+* Add a nested_depth argument to poll_for_events
+* Update the home-page in setup.cfg
+* Standardize import format
+* Remove unused function
+* Updated from global requirements
+* Change usage of _auth_url private attribute
+* Updated from global requirements
+* Remove discover from test-requirements
+* Add support for stack file list
+* Updated from global requirements
+* Trivial: Remove out-of-date and useless example
+* Add Python 3.5 classifier and venv
+* Updated from global requirements
+
+1.3.0
+-----
+
+* Fix doc build if git is absent
+* Fix deprecation message for stack-preview
+* Updated from global requirements
+* Remove unused LOG
+* Remove white space between print and ()
+* base.Resource not define __ne__() built-in function
+* Updated from global requirements
+* Updated from global requirements
+* Fix typo
+* Pass correct arguments in osc plugin
+* Use osc_lib instead of cliff
+* Use osc-lib instead of openstackclient
+* Imported Translations from Zanata
+* Enhance error message
+* Replace dict.iteritems with six.iteritems to make PY3 compatible
+* Show 'deletion_time' of stacks
+* Updated from global requirements
+* Updated from global requirements
+* Implement client side of event list --nested-depth
+* Refactor test_shell
+* Serialize files when using SessionClient
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Show 'parameter_defaults' for environment-show
+* A resource list formatter for graphviz dot diagrams
+* Updated from global requirements
+* Implement "openstack stack failures list"
+* Updated from global requirements
+* Clean up osc fakes and mocks
+* Fix typo
+* osc resource-type-show description option
+* osc resource-type-list description option
+* Remove redundant auth discovery
+* switch to keystoneauth
+* Updated from global requirements
+* Allow redirects to use location from response
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Fix obscure error message when no template given to OSC
+* Replace tempest-lib with tempest.lib
+* Moved required parameter for visibility
+* use thread safe fnmatch
+* OpenStack client plugin for environment show
+* Add client library support for retrieving a stack's environment
+* Support "--pre-delete" argument for hook-clear
+* Fixed fragile assertion in test_template_utils
+
 1.2.0
 -----
 
 * Updated from global requirements
 * Updated from global requirements
 * Fix logging issue in heatclient tests
+* Add basic read-only function test for template validate
 * Support OS_KEY/OS_CERT environment variables
 * Replace assertRegexpMatches with assertRegex
+* Moved -t parameter for visibility
+* Move OpenStack client to test-requirements
 * OSC plugin for orchestration template validate
 * Use stack.get for resolving outputs for old API
 * Fix regression handling relative paths in environment
@@ -28,6 +116,7 @@ CHANGES
 * Use poll_for_events for "openstack stack delete"
 * Add OSC plugin for openstack orchestation service list
 * Add OSC plugin for openstack orchestation build info
+* Register a log formatter for stack event list
 * Basic set of stack functional tests for openstack client
 * Strip any whitespace before checking for json
 * Add OSC plugin for stack resource mark unhealthy
