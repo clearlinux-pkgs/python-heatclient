@@ -4,7 +4,7 @@
 #
 Name     : python-heatclient
 Version  : 1.5.0
-Release  : 30
+Release  : 31
 URL      : http://tarballs.openstack.org/python-heatclient/python-heatclient-1.5.0.tar.gz
 Source0  : http://tarballs.openstack.org/python-heatclient/python-heatclient-1.5.0.tar.gz
 Summary  : OpenStack Orchestration API Client Library
