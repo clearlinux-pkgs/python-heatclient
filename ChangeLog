@@ -1,15 +1,70 @@
 CHANGES
 =======
 
-1.5.0
+1.8.0
 -----
 
-* Add parameter_merge_startegies section
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Support -y for --yes
+* Enable coverage report in console output
+* Distinguish between stack and resource events when polling
+* Make sure the --heat-url option is respected, part 2
+* Remove LOG Warning from __eq__
+* Add convenience function for events over websocket
+
+1.7.0
+-----
+
+* Updated from global requirements
+* Update docs for mark-unhealthy command
+* Add aliases to orchestration template version list
+* User server side env merging with osc plugin
+* Fix doc on keystoneauth session api usage
+* Updated from global requirements
+* Fix event list help
+* Updated from global requirements
+* Use default service_type with session
+* Show team and repo badges on README
+* Don't resolve outputs when polling events
+* Updated from global requirements
+* Update headers for the Openstack Orchestration commands
+
+1.6.1
+-----
+
+* Use endpoint as endpoint_override
+
+1.6.0
+-----
+
+* Add heat CLI test for deleting stack
+* Add heat CLI test for creating stack from URL
+* Remove unused scripts in tools
+* Remove oslo-incubator modules
+* Move required modules from oslo-incubator
+* Updated from global requirements
+* Make method import_versioned_module work
+* Graduate to oslo.i18n and cleanup incubator usage
+* Change property option into append action
+* Updated from global requirements
+* Return condition functions based on the filter param
+* Updated from global requirements
+* Use region_name and interface with session
+* Fix help string for osc resource show <resource>
+* handle empty sections in environment files
+* Updated from global requirements
+* Fix "heat output-show -F json" output format
+* Use event_time as default event sort key in OSC
+* Updated from global requirements
+* Updated from global requirements
+* Improved the help message of the stack-list tags
+* delete python bytecode including pyo before every test run
+* Don't use endpoint_override with session
 * Show resource name path in event log formatter
-* Update .gitreview for stable/newton
-* Show resource name path in event log formatter
+* Add url in setup.cfg
 * Clean imports in code
-* Update .gitreview for stable/newton
 * Modify use of assertTrue(A in B)
 * Import mox in __init__.py
 * Replace functions 'Dict.get' and 'del' with 'Dict.pop'
