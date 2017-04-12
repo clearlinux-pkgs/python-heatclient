@@ -1,6 +1,24 @@
 CHANGES
 =======
 
+1.9.0
+-----
+
+* Updated from global requirements
+* Build event stack_name from links
+* Fix error message when deployment not found
+* Remove log translations
+* Updated from global requirements
+* Updated from global requirements
+* Update test requirement
+* Use endpoint_type with session client
+* Support openstack stack export
+* Updated from global requirements
+* Updated from global requirements
+* Handle log message interpolation by the logger
+* Don't always resolve outputs when showing a stack
+* Show 'project' info if heat server returns
+
 1.8.0
 -----
 
@@ -35,12 +53,15 @@ CHANGES
 -----
 
 * Use endpoint as endpoint_override
+* Trivial:remove unused code
 
 1.6.0
 -----
 
 * Add heat CLI test for deleting stack
 * Add heat CLI test for creating stack from URL
+* Replace mox3 with mock
+* Replace mox3 with mock
 * Remove unused scripts in tools
 * Remove oslo-incubator modules
 * Move required modules from oslo-incubator
