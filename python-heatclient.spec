@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xC36CDCB4DF00C68C (infra-root@openstack.org)
 #
 Name     : python-heatclient
-Version  : 1.16.0
-Release  : 36
-URL      : http://tarballs.openstack.org/python-heatclient/python-heatclient-1.16.0.tar.gz
-Source0  : http://tarballs.openstack.org/python-heatclient/python-heatclient-1.16.0.tar.gz
-Source99 : http://tarballs.openstack.org/python-heatclient/python-heatclient-1.16.0.tar.gz.asc
+Version  : 1.16.1
+Release  : 37
+URL      : http://tarballs.openstack.org/python-heatclient/python-heatclient-1.16.1.tar.gz
+Source0  : http://tarballs.openstack.org/python-heatclient/python-heatclient-1.16.1.tar.gz
+Source99 : http://tarballs.openstack.org/python-heatclient/python-heatclient-1.16.1.tar.gz.asc
 Summary  : OpenStack Orchestration API Client Library
 Group    : Development/Tools
 License  : Apache-2.0
@@ -80,14 +80,14 @@ python3 components for the python-heatclient package.
 
 
 %prep
-%setup -q -n python-heatclient-1.16.0
+%setup -q -n python-heatclient-1.16.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1532381666
+export SOURCE_DATE_EPOCH=1532714532
 python3 setup.py build -b py3
 
 %install

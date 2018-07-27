@@ -1,10 +1,18 @@
 CHANGES
 =======
 
+1.16.1
+------
+
+* Handle token\_endpoint auth type in osc plugin
+* Update the documentation link for doc migration
+
 1.16.0
 ------
 
 * Mark stacks returned by get loaded
+* Remove PyPI downloads
+* fix tox python3 overrides
 * Fix osc cli docs
 
 1.15.0
@@ -14,11 +22,13 @@ CHANGES
 * Use assertRegex instead of assertRegexpMatches
 * add lower-constraints job
 * Improve titles of generated API documentation
+* Add heat CLI test for stack-show
 * Follow the new PTI for document build
 * Updated from global requirements
 * Updated from global requirements
 * Updated from global requirements
 * Update reno for stable/queens
+* Fix log\_http\_request function in http module
 
 1.14.0
 ------
@@ -61,6 +71,7 @@ CHANGES
 * Remove vestigate HUDSON\_PUBLISH\_DOCS reference
 * Updated from global requirements
 * Imported Translations from Zanata
+* Using fixtures instead of deprecated mockpatch module
 * Updated from global requirements
 
 1.11.0
@@ -73,6 +84,7 @@ CHANGES
 * Updated from global requirements
 * Updated from global requirements
 * Switch from oslosphinx to openstackdocstheme
+* Enable some off-by-default checks
 * Updated from global requirements
 
 1.10.0
