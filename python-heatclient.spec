@@ -6,17 +6,17 @@
 #
 Name     : python-heatclient
 Version  : 1.16.1
-Release  : 38
+Release  : 39
 URL      : http://tarballs.openstack.org/python-heatclient/python-heatclient-1.16.1.tar.gz
 Source0  : http://tarballs.openstack.org/python-heatclient/python-heatclient-1.16.1.tar.gz
 Source99 : http://tarballs.openstack.org/python-heatclient/python-heatclient-1.16.1.tar.gz.asc
 Summary  : OpenStack Orchestration API Client Library
 Group    : Development/Tools
 License  : Apache-2.0
-Requires: python-heatclient-bin
-Requires: python-heatclient-python3
-Requires: python-heatclient-license
-Requires: python-heatclient-python
+Requires: python-heatclient-bin = %{version}-%{release}
+Requires: python-heatclient-license = %{version}-%{release}
+Requires: python-heatclient-python = %{version}-%{release}
+Requires: python-heatclient-python3 = %{version}-%{release}
 Requires: Babel
 Requires: PyYAML
 Requires: Sphinx
@@ -36,9 +36,6 @@ Requires: six
 Requires: sphinxcontrib-httpdomain
 BuildRequires : buildreq-distutils3
 BuildRequires : pbr
-BuildRequires : pip
-BuildRequires : python3-dev
-BuildRequires : setuptools
 
 %description
 Team and repository tags
@@ -47,7 +44,7 @@ Team and repository tags
 %package bin
 Summary: bin components for the python-heatclient package.
 Group: Binaries
-Requires: python-heatclient-license
+Requires: python-heatclient-license = %{version}-%{release}
 
 %description bin
 bin components for the python-heatclient package.
@@ -64,7 +61,7 @@ license components for the python-heatclient package.
 %package python
 Summary: python components for the python-heatclient package.
 Group: Default
-Requires: python-heatclient-python3
+Requires: python-heatclient-python3 = %{version}-%{release}
 
 %description python
 python components for the python-heatclient package.
@@ -87,14 +84,14 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1532727695
-python3 setup.py build -b py3
+export SOURCE_DATE_EPOCH=1541272241
+python3 setup.py build
 
 %install
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/doc/python-heatclient
-cp LICENSE %{buildroot}/usr/share/doc/python-heatclient/LICENSE
-python3 -tt setup.py build -b py3 install --root=%{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/python-heatclient
+cp LICENSE %{buildroot}/usr/share/package-licenses/python-heatclient/LICENSE
+python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
@@ -107,8 +104,8 @@ echo ----[ mark ]----
 /usr/bin/heat
 
 %files license
-%defattr(-,root,root,-)
-/usr/share/doc/python-heatclient/LICENSE
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/python-heatclient/LICENSE
 
 %files python
 %defattr(-,root,root,-)
