@@ -1,9 +1,29 @@
 CHANGES
 =======
 
+1.17.0
+------
+
+* Update the bugs link to storyboard
+* Update min tox version to 2.0
+* Replace deprecated "decodestring()" by "decodebytes()"
+* Don't quote {posargs} in tox.ini
+* Set X-Region-Name in header when using SessionClient
+* Trivial: Update pypi url to new url
+* Use templates for cover and lower-constraints
+* Don't change pyyaml behavior
+* Migrate the link of bug report button to storyboard
+* add python 3.6 unit test job
+* switch documentation job to new PTI
+* import zuul job settings from project-config
+* fix bug link in readme
+* Update reno for stable/rocky
+* Switch to stestr
+
 1.16.1
 ------
 
+* Load files from adopt file when adopt stack
 * Handle token\_endpoint auth type in osc plugin
 * Update the documentation link for doc migration
 
