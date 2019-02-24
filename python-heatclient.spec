@@ -6,7 +6,7 @@
 #
 Name     : python-heatclient
 Version  : 1.17.0
-Release  : 40
+Release  : 41
 URL      : http://tarballs.openstack.org/python-heatclient/python-heatclient-1.17.0.tar.gz
 Source0  : http://tarballs.openstack.org/python-heatclient/python-heatclient-1.17.0.tar.gz
 Source99 : http://tarballs.openstack.org/python-heatclient/python-heatclient-1.17.0.tar.gz.asc
@@ -19,21 +19,17 @@ Requires: python-heatclient-python = %{version}-%{release}
 Requires: python-heatclient-python3 = %{version}-%{release}
 Requires: Babel
 Requires: PyYAML
-Requires: Sphinx
 Requires: cliff
 Requires: iso8601
 Requires: keystoneauth1
-Requires: openstackdocstheme
 Requires: osc-lib
 Requires: oslo.i18n
 Requires: oslo.serialization
 Requires: oslo.utils
 Requires: pbr
 Requires: python-swiftclient
-Requires: reno
 Requires: requests
 Requires: six
-Requires: sphinxcontrib-httpdomain
 BuildRequires : buildreq-distutils3
 BuildRequires : pbr
 
@@ -87,7 +83,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1547737025
+export SOURCE_DATE_EPOCH=1551035574
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
