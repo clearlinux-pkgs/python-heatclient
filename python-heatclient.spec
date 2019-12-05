@@ -6,7 +6,7 @@
 #
 Name     : python-heatclient
 Version  : 1.17.0
-Release  : 43
+Release  : 44
 URL      : http://tarballs.openstack.org/python-heatclient/python-heatclient-1.17.0.tar.gz
 Source0  : http://tarballs.openstack.org/python-heatclient/python-heatclient-1.17.0.tar.gz
 Source99 : http://tarballs.openstack.org/python-heatclient/python-heatclient-1.17.0.tar.gz.asc
