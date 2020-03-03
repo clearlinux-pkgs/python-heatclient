@@ -6,10 +6,10 @@
 #
 Name     : python-heatclient
 Version  : 1.17.0
-Release  : 45
+Release  : 46
 URL      : http://tarballs.openstack.org/python-heatclient/python-heatclient-1.17.0.tar.gz
 Source0  : http://tarballs.openstack.org/python-heatclient/python-heatclient-1.17.0.tar.gz
-Source99 : http://tarballs.openstack.org/python-heatclient/python-heatclient-1.17.0.tar.gz.asc
+Source1  : http://tarballs.openstack.org/python-heatclient/python-heatclient-1.17.0.tar.gz.asc
 Summary  : Python client library for Heat
 Group    : Development/Tools
 License  : Apache-2.0
@@ -30,15 +30,66 @@ Requires: pbr
 Requires: python-swiftclient
 Requires: requests
 Requires: six
+BuildRequires : Babel
+BuildRequires : PyYAML
 BuildRequires : buildreq-distutils3
+BuildRequires : cliff
+BuildRequires : iso8601
+BuildRequires : keystoneauth1
+BuildRequires : osc-lib
+BuildRequires : oslo.i18n
+BuildRequires : oslo.serialization
+BuildRequires : oslo.utils
 BuildRequires : pbr
+BuildRequires : python-swiftclient
+BuildRequires : requests
+BuildRequires : six
 
 %description
 ========================
 Team and repository tags
 ========================
+
 .. image:: https://governance.openstack.org/tc/badges/python-heatclient.svg
-:target: https://governance.openstack.org/tc/reference/tags/index.html
+    :target: https://governance.openstack.org/tc/reference/tags/index.html
+
+.. Change things from this point on
+
+=================
+python-heatclient
+=================
+
+.. image:: https://img.shields.io/pypi/v/python-heatclient.svg
+    :target: https://pypi.org/project/python-heatclient/
+    :alt: Latest Version
+
+
+OpenStack Orchestration API Client Library
+
+This is a client library for Heat built on the Heat orchestration API. It
+provides a Python API (the ``heatclient`` module) and a command-line tool
+(``heat``).
+
+* Free software: Apache license
+* `PyPi`_ - package installation
+* `Online Documentation`_
+* `Launchpad project`_ - release management
+* `Blueprints`_ - feature specifications
+* `Bugs`_ - issue tracking
+* `Source`_
+* `Specs`_
+* `Template`_
+* `How to Contribute`_
+
+.. _PyPi: https://pypi.org/project/python-heatclient
+.. _Online Documentation: https://docs.openstack.org/python-heatclient/latest
+.. _Launchpad project: https://launchpad.net/python-heatclient
+.. _Blueprints: https://blueprints.launchpad.net/python-heatclient
+.. _Bugs: https://storyboard.openstack.org/#!/project/openstack/python-heatclient
+.. _Source: https://git.openstack.org/cgit/openstack/python-heatclient
+.. _How to Contribute: https://docs.openstack.org/infra/manual/developers.html
+.. _Specs: https://specs.openstack.org/openstack/heat-specs/
+.. _Template: https://git.openstack.org/cgit/openstack/heat-templates/
 
 %package bin
 Summary: bin components for the python-heatclient package.
@@ -70,6 +121,7 @@ python components for the python-heatclient package.
 Summary: python3 components for the python-heatclient package.
 Group: Default
 Requires: python3-core
+Provides: pypi(python-heatclient)
 
 %description python3
 python3 components for the python-heatclient package.
@@ -77,20 +129,28 @@ python3 components for the python-heatclient package.
 
 %prep
 %setup -q -n python-heatclient-1.17.0
+cd %{_builddir}/python-heatclient-1.17.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1551035574
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1583212406
+# -Werror is for werrorists
+export GCC_IGNORE_WERROR=1
+export CFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$CFLAGS -fno-lto "
+export FFLAGS="$CFLAGS -fno-lto "
+export CXXFLAGS="$CXXFLAGS -fno-lto "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
 %install
+export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/python-heatclient
-cp LICENSE %{buildroot}/usr/share/package-licenses/python-heatclient/LICENSE
+cp %{_builddir}/python-heatclient-1.17.0/LICENSE %{buildroot}/usr/share/package-licenses/python-heatclient/57aed0b0f74e63f6b85cce11bce29ba1710b422b
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -105,7 +165,7 @@ echo ----[ mark ]----
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/python-heatclient/LICENSE
+/usr/share/package-licenses/python-heatclient/57aed0b0f74e63f6b85cce11bce29ba1710b422b
 
 %files python
 %defattr(-,root,root,-)
