@@ -6,11 +6,11 @@
 #
 Name     : python-heatclient
 Version  : 1.17.0
-Release  : 46
+Release  : 47
 URL      : http://tarballs.openstack.org/python-heatclient/python-heatclient-1.17.0.tar.gz
 Source0  : http://tarballs.openstack.org/python-heatclient/python-heatclient-1.17.0.tar.gz
 Source1  : http://tarballs.openstack.org/python-heatclient/python-heatclient-1.17.0.tar.gz.asc
-Summary  : Python client library for Heat
+Summary  : OpenStack Orchestration API Client Library
 Group    : Development/Tools
 License  : Apache-2.0
 Requires: python-heatclient-bin = %{version}-%{release}
@@ -46,50 +46,8 @@ BuildRequires : requests
 BuildRequires : six
 
 %description
-========================
 Team and repository tags
-========================
-
-.. image:: https://governance.openstack.org/tc/badges/python-heatclient.svg
-    :target: https://governance.openstack.org/tc/reference/tags/index.html
-
-.. Change things from this point on
-
-=================
-python-heatclient
-=================
-
-.. image:: https://img.shields.io/pypi/v/python-heatclient.svg
-    :target: https://pypi.org/project/python-heatclient/
-    :alt: Latest Version
-
-
-OpenStack Orchestration API Client Library
-
-This is a client library for Heat built on the Heat orchestration API. It
-provides a Python API (the ``heatclient`` module) and a command-line tool
-(``heat``).
-
-* Free software: Apache license
-* `PyPi`_ - package installation
-* `Online Documentation`_
-* `Launchpad project`_ - release management
-* `Blueprints`_ - feature specifications
-* `Bugs`_ - issue tracking
-* `Source`_
-* `Specs`_
-* `Template`_
-* `How to Contribute`_
-
-.. _PyPi: https://pypi.org/project/python-heatclient
-.. _Online Documentation: https://docs.openstack.org/python-heatclient/latest
-.. _Launchpad project: https://launchpad.net/python-heatclient
-.. _Blueprints: https://blueprints.launchpad.net/python-heatclient
-.. _Bugs: https://storyboard.openstack.org/#!/project/openstack/python-heatclient
-.. _Source: https://git.openstack.org/cgit/openstack/python-heatclient
-.. _How to Contribute: https://docs.openstack.org/infra/manual/developers.html
-.. _Specs: https://specs.openstack.org/openstack/heat-specs/
-.. _Template: https://git.openstack.org/cgit/openstack/heat-templates/
+        ========================
 
 %package bin
 Summary: bin components for the python-heatclient package.
@@ -121,7 +79,21 @@ python components for the python-heatclient package.
 Summary: python3 components for the python-heatclient package.
 Group: Default
 Requires: python3-core
-Provides: pypi(python-heatclient)
+Provides: pypi(python_heatclient)
+Requires: pypi(babel)
+Requires: pypi(cliff)
+Requires: pypi(iso8601)
+Requires: pypi(keystoneauth1)
+Requires: pypi(osc_lib)
+Requires: pypi(oslo.i18n)
+Requires: pypi(oslo.serialization)
+Requires: pypi(oslo.utils)
+Requires: pypi(pbr)
+Requires: pypi(prettytable)
+Requires: pypi(python_swiftclient)
+Requires: pypi(pyyaml)
+Requires: pypi(requests)
+Requires: pypi(six)
 
 %description python3
 python3 components for the python-heatclient package.
@@ -136,8 +108,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583212406
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1583541030
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
