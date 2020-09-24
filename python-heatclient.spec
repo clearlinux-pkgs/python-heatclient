@@ -6,7 +6,7 @@
 #
 Name     : python-heatclient
 Version  : 2.2.0
-Release  : 48
+Release  : 49
 URL      : http://tarballs.openstack.org/python-heatclient/python-heatclient-2.2.0.tar.gz
 Source0  : http://tarballs.openstack.org/python-heatclient/python-heatclient-2.2.0.tar.gz
 Source1  : http://tarballs.openstack.org/python-heatclient/python-heatclient-2.2.0.tar.gz.asc
